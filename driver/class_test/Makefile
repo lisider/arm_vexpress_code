@@ -1,5 +1,5 @@
 .PHONY:all clean
-WORK_ROOT=../../../../
+WORK_ROOT=../../../
 KERNEL_ROOT=${WORK_ROOT}/linux_4.0
 ifneq ($(KERNELRELEASE),)
 
@@ -16,6 +16,6 @@ else
 		make  CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm -C $(KDIR) M=$(PWD) modules && cp *.ko ${WORK_ROOT}/busybox/rootfs/work
 endif
 clean:
-		rm -fr *.ko *.o *.mod.o *.mod.c *.symvers *.order .*.ko .tmp_versions
+		rm -fr *.ko *.o *.mod.o *.mod.c *.symvers *.order .*.ko .tmp_versions .*.cmd
 
 endif
