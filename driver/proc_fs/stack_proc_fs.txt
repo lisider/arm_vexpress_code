@@ -1,0 +1,16 @@
+CPU: 0 PID: 752 Comm: cat Tainted: G           O    4.0.0+ #62
+Hardware name: ARM-Versatile Express
+[<80016cb0>] (unwind_backtrace) from [<80012bc4>] (show_stack+0x20/0x24)
+[<80012bc4>] (show_stack) from [<80543528>] (dump_stack+0x80/0x90)
+[<80543528>] (dump_stack) from [<7f01404c>] (proc_show_ver+0x1c/0x6c [proc_fs])
+[<7f01404c>] (proc_show_ver [proc_fs]) from [<8013a49c>] (seq_read+0x204/0x4bc)
+[<8013a49c>] (seq_read) from [<8016a490>] (proc_reg_read+0x6c/0x94)
+[<8016a490>] (proc_reg_read) from [<80117f1c>] (do_readv_writev+0x250/0x28c)
+[<80117f1c>] (do_readv_writev) from [<80117f9c>] (vfs_readv+0x44/0x5c)
+[<80117f9c>] (vfs_readv) from [<801454b8>] (default_file_splice_read+0x240/0x358)
+[<801454b8>] (default_file_splice_read) from [<8014430c>] (do_splice_to+0x80/0x94)
+[<8014430c>] (do_splice_to) from [<801443d0>] (splice_direct_to_actor+0xb0/0x238)
+[<801443d0>] (splice_direct_to_actor) from [<801445f8>] (do_splice_direct+0xa0/0xc8)
+[<801445f8>] (do_splice_direct) from [<80117620>] (do_sendfile+0x1a8/0x328)
+[<80117620>] (do_sendfile) from [<80118458>] (SyS_sendfile64+0xe8/0xec)
+[<80118458>] (SyS_sendfile64) from [<8000ebc0>] (ret_fast_syscall+0x0/0x34)

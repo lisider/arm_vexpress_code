@@ -1,0 +1,14 @@
+CPU: 0 PID: 726 Comm: read_sys_int Tainted: G           O    4.0.0+ #62
+Hardware name: ARM-Versatile Express
+[<80016cb0>] (unwind_backtrace) from [<80012bc4>] (show_stack+0x20/0x24)
+[<80012bc4>] (show_stack) from [<80543528>] (dump_stack+0x80/0x90)
+[<80543528>] (dump_stack) from [<7f0080e8>] (sysfs_demo_show_node_int+0x20/0x54 [sys_value])
+[<7f0080e8>] (sysfs_demo_show_node_int [sys_value]) from [<802b5c68>] (kobj_attr_show+0x1c/0x28)
+[<802b5c68>] (kobj_attr_show) from [<8017a2cc>] (sysfs_kf_seq_show+0x98/0x108)
+[<8017a2cc>] (sysfs_kf_seq_show) from [<80178cb4>] (kernfs_seq_show+0x34/0x38)
+[<80178cb4>] (kernfs_seq_show) from [<8013a49c>] (seq_read+0x204/0x4bc)
+[<8013a49c>] (seq_read) from [<801795f8>] (kernfs_fop_read+0x120/0x180)
+[<801795f8>] (kernfs_fop_read) from [<801177c8>] (__vfs_read+0x28/0x5c)
+[<801177c8>] (__vfs_read) from [<80117884>] (vfs_read+0x88/0x114)
+[<80117884>] (vfs_read) from [<8011795c>] (SyS_read+0x4c/0xa0)
+[<8011795c>] (SyS_read) from [<8000ebc0>] (ret_fast_syscall+0x0/0x34)
