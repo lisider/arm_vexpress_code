@@ -1,0 +1,10 @@
+CPU: 0 PID: 755 Comm: app_netlink Tainted: G           O    4.0.0+ #64
+Hardware name: ARM-Versatile Express
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<7f03010c>] (netlink_rcv_msg+0x1c/0x54 [netlink])
+[<7f03010c>] (netlink_rcv_msg [netlink]) from [<804acea8>] (netlink_unicast+0x178/0x204)
+[<804acea8>] (netlink_unicast) from [<804ad31c>] (netlink_sendmsg+0x310/0x374)
+[<804ad31c>] (netlink_sendmsg) from [<80470d00>] (do_sock_sendmsg+0x64/0x88)
+[<80470d00>] (do_sock_sendmsg) from [<80472e48>] (SyS_sendto+0xf8/0x12c)
+[<80472e48>] (SyS_sendto) from [<8000ebc0>] (ret_fast_syscall+0x0/0x34)

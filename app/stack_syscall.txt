@@ -1,0 +1,17 @@
+userfaultfd(0x1 /* UFFD_??? */suws_kernel syscall arch/arm/kernel/sys_arm.c,sys_my_add,43
+
+CPU: 0 PID: 699 Comm: sys_my_add_user Not tainted 4.0.0+ #64
+Hardware name: ARM-Versatile Express
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<80012858>] (sys_my_add+0x40/0x48)
+[<80012858>] (sys_my_add) from [<8000ed34>] (__sys_trace_return+0x0/0x2c)
+
+
+
+CPU: 0 PID: 700 Comm: sys_my_add_user Not tainted 4.0.0+ #64
+Hardware name: ARM-Versatile Express
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<80012858>] (sys_my_add+0x40/0x48)
+[<80012858>] (sys_my_add) from [<8000ebc0>] (ret_fast_syscall+0x0/0x34)

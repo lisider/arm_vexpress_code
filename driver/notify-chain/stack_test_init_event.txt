@@ -1,0 +1,14 @@
+CPU: 0 PID: 721 Comm: insmod Tainted: G           O    4.0.0+ #64
+Hardware name: ARM-Versatile Express
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<7f008048>] (test_init_event+0x1c/0x3c [test_chain_1])
+[<7f008048>] (test_init_event [test_chain_1]) from [<800436b0>] (notifier_call_chain+0x54/0x94)
+[<800436b0>] (notifier_call_chain) from [<800438f8>] (raw_notifier_call_chain+0x28/0x30)
+[<800438f8>] (raw_notifier_call_chain) from [<7f008028>] (call_test_notifiers+0x28/0x2c [test_chain_1])
+[<7f008028>] (call_test_notifiers [test_chain_1]) from [<7f00e028>] (test_chain_2_init+0x28/0x30 [test_chain_2])
+[<7f00e028>] (test_chain_2_init [test_chain_2]) from [<800089e8>] (do_one_initcall+0x9c/0x1e4)
+[<800089e8>] (do_one_initcall) from [<805416b0>] (do_init_module+0x70/0x1bc)
+[<805416b0>] (do_init_module) from [<8008dc90>] (load_module+0x1850/0x1ed8)
+[<8008dc90>] (load_module) from [<8008e440>] (SyS_init_module+0x128/0x138)
+[<8008e440>] (SyS_init_module) from [<8000ebc0>] (ret_fast_syscall+0x0/0x34)

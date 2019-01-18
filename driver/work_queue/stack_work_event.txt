@@ -1,0 +1,10 @@
+CPU: 0 PID: 407 Comm: kworker/0:1 Tainted: G           O    4.0.0+ #64
+Hardware name: ARM-Versatile Express
+Workqueue: events test_work_func [work_event]
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<7f01c018>] (test_work_func+0x18/0x28 [work_event])
+[<7f01c018>] (test_work_func [work_event]) from [<8003d084>] (process_one_work+0x154/0x484)
+[<8003d084>] (process_one_work) from [<8003dcbc>] (worker_thread+0x54/0x55c)
+[<8003dcbc>] (worker_thread) from [<80042928>] (kthread+0xec/0x104)
+[<80042928>] (kthread) from [<8000ec60>] (ret_from_fork+0x14/0x34)

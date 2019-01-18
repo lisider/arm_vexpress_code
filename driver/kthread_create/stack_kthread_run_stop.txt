@@ -1,0 +1,20 @@
+
+CPU: 0 PID: 713 Comm: insmod Tainted: G           O    4.0.0+ #64
+Hardware name: ARM-Versatile Express
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<7f006010>] (init+0x10/0x50 [kthread_run_stop])
+[<7f006010>] (init [kthread_run_stop]) from [<800089e8>] (do_one_initcall+0x9c/0x1e4)
+[<800089e8>] (do_one_initcall) from [<805416b0>] (do_init_module+0x70/0x1bc)
+[<805416b0>] (do_init_module) from [<8008dc90>] (load_module+0x1850/0x1ed8)
+[<8008dc90>] (load_module) from [<8008e440>] (SyS_init_module+0x128/0x138)
+[<8008e440>] (SyS_init_module) from [<8000ebc0>] (ret_fast_syscall+0x0/0x34)
+
+
+CPU: 0 PID: 715 Comm: my_function Tainted: G           O    4.0.0+ #64
+Hardware name: ARM-Versatile Express
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<7f004018>] (my_fuction+0x18/0x130 [kthread_run_stop])
+[<7f004018>] (my_fuction [kthread_run_stop]) from [<80042928>] (kthread+0xec/0x104)
+[<80042928>] (kthread) from [<8000ec60>] (ret_from_fork+0x14/0x34)

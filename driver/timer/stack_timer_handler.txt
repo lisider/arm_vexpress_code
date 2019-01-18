@@ -1,0 +1,20 @@
+CPU: 0 PID: 0 Comm: swapper/0 Tainted: G           O    4.0.0+ #64
+Hardware name: ARM-Versatile Express
+[<80016cf0>] (unwind_backtrace) from [<80012c1c>] (show_stack+0x20/0x24)
+[<80012c1c>] (show_stack) from [<80543568>] (dump_stack+0x80/0x90)
+[<80543568>] (dump_stack) from [<7f018020>] (second_timer_handle+0x20/0x48 [timer])
+[<7f018020>] (second_timer_handle [timer]) from [<80074ab4>] (call_timer_fn+0x50/0x128)
+[<80074ab4>] (call_timer_fn) from [<8007592c>] (run_timer_softirq+0x218/0x2cc)
+[<8007592c>] (run_timer_softirq) from [<8002a52c>] (__do_softirq+0xf8/0x30c)
+[<8002a52c>] (__do_softirq) from [<8002aa0c>] (irq_exit+0x88/0xc0)
+[<8002aa0c>] (irq_exit) from [<80064f48>] (__handle_domain_irq+0x70/0xc4)
+[<80064f48>] (__handle_domain_irq) from [<80008700>] (gic_handle_irq+0x34/0x6c)
+[<80008700>] (gic_handle_irq) from [<800137c0>] (__irq_svc+0x40/0x54)
+Exception stack(0x807bdf08 to 0x807bdf50)
+df00:                   00000001 00000000 00000000 80020640 807bc000 807be4a0
+df20: 00000000 00000000 00000001 807be454 807f1800 807bdf5c 807bdf60 807bdf50
+df40: 8000f804 8000f808 60000013 ffffffff
+[<800137c0>] (__irq_svc) from [<8000f808>] (arch_cpu_idle+0x48/0x4c)
+[<8000f808>] (arch_cpu_idle) from [<8005b424>] (cpu_startup_entry+0x300/0x38c)
+[<8005b424>] (cpu_startup_entry) from [<8053f22c>] (rest_init+0x84/0x88)
+[<8053f22c>] (rest_init) from [<8074fea0>] (start_kernel+0x45c/0x46c)
