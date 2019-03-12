@@ -1,0 +1,11 @@
+ifneq  ($(KERNELRELEASE),)
+obj-m := ${OBJ}.o
+${OBJ}-objs := simu_uart_2.o  simu_uart.o
+else
+KDIR := /lib/modules/$(shell uname -r)/build
+PWD:=$(shell pwd)
+all:
+	make -C $(KDIR) M=$(PWD) modules
+clean:
+	rm -f *.ko *.o *.symvers *.cmd *.cmd.o
+endif

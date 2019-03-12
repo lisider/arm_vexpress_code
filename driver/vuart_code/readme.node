@@ -1,0 +1,128 @@
+diff dev.log dev2.log
+115a116
+> ttyVU0
+
+diff sys.log sys2.log
+528a529
+> vuart.0
+555a557
+> vuart
+722a725,731
+> /sys/bus/platform/drivers/vuart:
+> bind
+> module
+> uevent
+> unbind
+> vuart.0
+>
+938a948
+> vuart
+1152a1163
+> ttyVU0
+1190a1202,1204
+> /sys/class/vuart:
+> vuart
+>
+1229a1244
+> 252:0
+1395a1411
+> vuart.0
+4018a4035,4049
+> /sys/devices/platform/vuart.0:
+> driver
+> driver_override
+> modalias
+> power
+> subsystem
+> uevent
+>
+> /sys/devices/platform/vuart.0/power:
+> autosuspend_delay_ms
+> control
+> runtime_active_time
+> runtime_status
+> runtime_suspended_time
+>
+4274a4306
+> vuart
+4889a4922
+> ttyVU0
+5987a6021,6055
+> /sys/devices/virtual/tty/ttyVU0:
+> close_delay
+> closing_wait
+> custom_divisor
+> dev
+> flags
+> io_type
+> iomem_base
+> iomem_reg_shift
+> irq
+> line
+> port
+> power
+> subsystem
+> type
+> uartclk
+> uevent
+> xmit_fifo_size
+>
+> /sys/devices/virtual/tty/ttyVU0/power:
+> autosuspend_delay_ms
+> control
+> runtime_active_time
+> runtime_status
+> runtime_suspended_time
+> wakeup
+> wakeup_abort_count
+> wakeup_active
+> wakeup_active_count
+> wakeup_count
+> wakeup_expire_count
+> wakeup_last_time_ms
+> wakeup_max_time_ms
+> wakeup_total_time_ms
+>
+6301a6370,6386
+> /sys/devices/virtual/vuart:
+> vuart
+>
+> /sys/devices/virtual/vuart/vuart:
+> power
+> rx
+> subsystem
+> tx
+> uevent
+>
+> /sys/devices/virtual/vuart/vuart/power:
+> autosuspend_delay_ms
+> control
+> runtime_active_time
+> runtime_status
+> runtime_suspended_time
+>
+14293a14379
+> tty_sample
+14641a14728,14749
+>
+> /sys/module/tty_sample:
+> coresize
+> drivers
+> holders
+> initsize
+> initstate
+> notes
+> refcnt
+> sections
+> taint
+> uevent
+>
+> /sys/module/tty_sample/drivers:
+> platform:vuart
+>
+> /sys/module/tty_sample/holders:
+>
+> /sys/module/tty_sample/notes:
+>
+> /sys/module/tty_sample/sections:
+> __mcount_loc
