@@ -24,8 +24,24 @@ typedef struct{
 
 static resource_t resource;
 
+int get_cpsr(void){
+    int tmp;
+	asm volatile (
+		"mrs r3,cpsr\n\t"
+		"mov %0,r3\n\t"
+        : "=r" (tmp)
+        :
+	);
+    return tmp;
+}
+
+int print_cpsr(void){
+    printk("kernel space:0x%x\n",get_cpsr());
+}
+
 static int hello_open(struct inode *inode, struct file *file)
 {
+    print_cpsr();
 	printk("my device is open\n");
     file->private_data = &resource;
 	return 0;
@@ -37,6 +53,7 @@ static ssize_t hello_read(struct file *file, char __user *buffer, size_t count, 
     int actual_readed;
     int max_free;
     int need_read;
+
 
     resource_t * tmp_resource = file->private_data;
 	printk("my device is read\n");

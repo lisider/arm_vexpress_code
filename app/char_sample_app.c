@@ -22,12 +22,28 @@
         }\
     }while(0)
 
+int get_cpsr(void){
+    int tmp;
+	asm volatile (
+		"mrs r3,cpsr\n\t"
+		"mov %0,r3\n\t"
+        : "=r" (tmp)
+        :
+	);
+    return tmp;
+}
+
+int print_cpsr(void){
+    printf("usr space:0x%x\n",get_cpsr());
+}
+
 int main(void)
 {
 	char buf[32];
 	int fd = 0;
     int n  = 0;
 
+    print_cpsr();
 	fd = open("/dev/hello_device",O_RDWR);
     if (fd < 0){
         perror("open");
